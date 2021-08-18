@@ -23,7 +23,6 @@ html{
     font-family: 'Rubik', sans-serif; 
 }
 
-#side_bar,
 .phone
 {
     display: none;
@@ -59,7 +58,9 @@ body{
         border-left: 2px solid var(--lightgray);    
     }
 
-    body{
+    #window{
+        width: 100vw;
+        height: 100vh;
         margin: 0;
         width: calc(100vw - 8px);
         height: calc(100vh - 8px);
@@ -68,6 +69,7 @@ body{
         border-right: 4px solid var(--darkgray);  
         border-top: 4px solid var(--lightgray);  
         border-left: 4px solid var(--lightgray); 
+        overflow: hidden;
         display: flex;
         flex-flow: column;
     }
