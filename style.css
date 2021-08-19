@@ -23,39 +23,30 @@ html{
     font-family: 'Rubik', sans-serif; 
 }
 
-.phone
-{
-    display: none;
-}
-
 body{
     width: 100vw;
     height: 100vh;
     overflow: hidden;
     margin: 0;
     background-color: var(--white);
+    position: absolute;
 }
 
-#container{
-    background-color: var(--marine);
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    margin-top: 0;
+.phone{
+    display: none;
+}
+
+.border{
+    border-bottom: 2px solid var(--darkgray);  
+    border-right: 2px solid var(--darkgray);  
+    border-top: 2px solid var(--lightgray);  
+    border-left: 2px solid var(--lightgray);    
 }
 
 @media screen and (max-width: 640px) {
     /* For mobile phones: */
-    .phone
-    {
+    .phone{
         display: block;
-    }
-    
-    .border{
-        border-bottom: 2px solid var(--darkgray);  
-        border-right: 2px solid var(--darkgray);  
-        border-top: 2px solid var(--lightgray);  
-        border-left: 2px solid var(--lightgray);    
     }
 
     #window{
@@ -72,6 +63,10 @@ body{
         overflow: hidden;
         display: flex;
         flex-flow: column;
+        position: relative;
+        transition: top 2s;
+        top: 0;
+        left: 0;
     }
 
     #side_bar{
