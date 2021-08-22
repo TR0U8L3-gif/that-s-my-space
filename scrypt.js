@@ -1,5 +1,7 @@
-var phone = document.getElementById("window");;
+var phone = document.getElementById("window");
 var minimized = true;
+var closed = true;
+var close_w = document.getElementById("close");
 
 function menu_in(x) {
     console.log(x);
@@ -17,6 +19,6 @@ function minimize(){
         phone.style.top = "0";
     }
     else{
-        phone.style.top = "90%";
+        phone.style.top = "80vh";
     }   
 }

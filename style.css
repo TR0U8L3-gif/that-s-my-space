@@ -26,7 +26,7 @@ html{
 body{
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    overflow: hidden; 
     margin: 0;
     background-color: var(--white);
     position: absolute;
@@ -67,6 +67,7 @@ body{
         transition: top 2s;
         top: 0;
         left: 0;
+        z-index: 50;
     }
 
     #side_bar{
@@ -91,7 +92,7 @@ body{
         padding: 0 5%;
         width: 20%;
         flex-grow: 1;
-        font-size: 20px;
+        font-size: clamp(20px,3vh,30px);
     }
 
     #side_bar #but{
@@ -138,6 +139,36 @@ body{
         margin-top: 0;
         box-shadow: inset 2px 2px 0 0 var(--marine2),
                     inset -2px -2px 0 0 var(--marine2);
+    }
+
+    #minimize{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: calc(100vh );
+        width: calc(100vw );
+        z-index: 0;
+        padding: 0 10%;
+        width: 80%;
+        font-size: clamp(15px,6vw,25px);
+
+    }
+    #minimize div{
+        max-width: 400px;
+        margin: auto;
+        position: relative;
+        top: 40%;
+        transform: translate(0,-50%);
+        padding: 10px;
+        border: 3px solid var(--darkgray);
+        box-shadow: 10px 10px  var(--gray);    
+        
+    }
+    #minimize p{
+        height: auto;
+        width: auto;
+        word-wrap: break-word;
+        margin-top: 0;
     }
 
     
