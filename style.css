@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap');
 
 :root {
---lightmarine: #B1E6D5;
 --marine: #b8e0df;
 --marine2: #dff3f349;
---darkmarine:#B7D2ED;
+--darkmarine:#b7d2ed54;
 
 --lightblue: #706fac;
 --blue: #000086;
@@ -83,7 +82,7 @@ body{
     }
 
     #side_bar{
-        min-width: calc(98% - 4px);
+        min-width: calc(98% - 6px);
         min-height: 4vh;
         background-color: var(--blue);
         margin: 1%;
@@ -92,11 +91,7 @@ body{
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;
-         /*position: absolute;
-       top: 0;
-        left: 0;*/
-        
-        border: 2px solid var(--lightblue);  
+        border: 3px solid var(--lightblue);  
         
     }
     #side_bar p{
@@ -146,11 +141,11 @@ body{
     #container{
         flex: 1;
         background-color: var(--marine);
-        width: 98%;
+        width: calc(98% -6px);
         margin: 1%;
         margin-top: 0;
-        box-shadow: inset 2px 2px 0 0 var(--marine2),
-                    inset -2px -2px 0 0 var(--marine2);
+        border: 3px solid var(--marine2); 
+  
     }
 
     #minimize{
@@ -199,6 +194,7 @@ body{
         height: 50px;
         margin: 1%;
         margin-top: 0;
+        background-color: var(--marine2);
     }
     #close #but{
         margin: 10px 30px;
@@ -209,8 +205,9 @@ body{
         float: left;
         cursor: pointer;
         line-height:30px;
+        background-color: var(--gray);
     }
-    
+
     #close #but::before{
         content: "";
         clear: both;
