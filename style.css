@@ -20,6 +20,7 @@ html{
     scroll-behavior: smooth;
     font-weight: 400;
     font-family: 'Rubik', sans-serif; 
+    -webkit-tap-highlight-color: transparent;
 }
 
 body{
