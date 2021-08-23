@@ -191,7 +191,7 @@ body{
         visibility: hidden;
     }
     #close .options{
-        height: 50px;
+        height: 54px;
         margin: 1%;
         margin-top: 0;
         background-color: var(--marine2);
