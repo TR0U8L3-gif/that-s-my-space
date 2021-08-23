@@ -12,13 +12,21 @@ function menu_out(x) {
     x.classList.remove("change");
 }
 
-function minimize(){
+function minimize_but(){
     minimized = !minimized;
-    console.log(minimized + " " + phone);
     if(minimized){
         phone.style.top = "0";
     }
     else{
         phone.style.top = "80vh";
     }   
+}
+
+function close_but(){
+    close_w.style.visibility= "visible";
+
+}
+
+function no_but(){
+    close_w.style.visibility= "hidden";
 }

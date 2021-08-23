@@ -42,6 +42,18 @@ body{
     border-top: 2px solid var(--lightgray);  
     border-left: 2px solid var(--lightgray);    
 }
+.border_outside{
+    border-bottom: 4px solid var(--darkgray);  
+    border-right: 4px solid var(--darkgray);  
+    border-top: 4px solid var(--lightgray);  
+    border-left: 4px solid var(--lightgray);    
+}
+.border_inside{
+    border-top: 2px solid var(--darkgray);  
+    border-left: 2px solid var(--darkgray);  
+    border-bottom: 2px solid var(--lightgray);  
+    border-right: 2px solid var(--lightgray);   
+}
 
 @media screen and (max-width: 640px) {
     /* For mobile phones: */
@@ -147,7 +159,7 @@ body{
         left: 0;
         height: calc(100vh );
         width: calc(100vw );
-        z-index: 0;
+        z-index: 49;
         padding: 0 10%;
         width: 80%;
         font-size: clamp(15px,6vw,25px);
@@ -170,6 +182,40 @@ body{
         word-wrap: break-word;
         margin-top: 0;
     }
+
+    #close{
+        width: clamp(250px,70vw,350px);
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 100;
+        background-color: var(--gray);
+        flex-flow: column;
+        visibility: hidden;
+    }
+    #close .options{
+        height: 50px;
+        margin: 1%;
+        margin-top: 0;
+    }
+    #close #but{
+        margin: 10px 30px;
+        width: calc(50% - 64px);
+        height: 30px;
+        max-width: 130px;
+        text-align: center;
+        float: left;
+        cursor: pointer;
+        line-height:30px;
+    }
+    
+    #close #but::before{
+        content: "";
+        clear: both;
+    }
+    
 
     
 }

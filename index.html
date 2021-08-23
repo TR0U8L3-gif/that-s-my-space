@@ -19,10 +19,10 @@
     <div id="window" >
         <div id="side_bar" class="phone">
             <p>Welcome</p>
-            <div id="but" class="minimize border" onclick="minimize()">
+            <div id="but" class="minimize border" onclick="minimize_but()">
                 <div class="bar3"></div>
             </div>
-            <div id="but" class="close border">
+            <div id="but" class="close border" onclick="close_but()">
                 <p>X</p>
             </div>
         </div>
@@ -32,8 +32,18 @@
         </div>
     </div>
     
-    <div id="close" class=" border" style="display: none;">
-
+    <div id="close" class="phone border_outside" >
+        <div id="side_bar" class="phone">
+            <p>Close</p>
+        </div>
+        <div class="options border_inside">
+            <div id="but" class="border" onclick="no_but()">
+                <p>No</p>
+            </div>
+            <div id="but" class="border" onclick="no_but()">
+                <p>No</p>
+            </div>
+        </div>
     </div>
 
 </html>
