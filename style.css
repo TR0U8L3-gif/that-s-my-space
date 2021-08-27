@@ -55,6 +55,15 @@ body{
     border-right: 2px solid var(--lightgray);   
 }
 
+#container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: clamp(5px,3%,15px);
+    padding: clamp(5px,3%,15px);
+}
+
+
 @media screen and (max-width: 640px) {
     /* For mobile phones: */
     .phone{
@@ -212,6 +221,22 @@ body{
     #close #but::before{
         content: "";
         clear: both;
+    }
+
+    .box{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .box .img{
+        width: 100%;
+        flex: 1;
+        background-color: var(--marine2);
+    }
+    .box p{
+        margin: 3% 0;
+        justify-content: flex-end;
+        font-size: clamp(10px,2vh,20px);
     }
     
 
