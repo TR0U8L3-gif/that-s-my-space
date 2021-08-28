@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap');
 
 :root {
---marine: #b8e0df;
---marine2: #dff3f349;
---darkmarine:#b7d2ed54;
+--marine: #008d8d;
+--marine2: #c4c7cc75;
+--darkmarine:#008d8d69;
 
 --lightblue: #706fac;
 --blue: #000086;
@@ -209,7 +209,7 @@ body{
         height: 54px;
         margin: 1%;
         margin-top: 0;
-        background-color: var(--marine2);
+        background-color: var(--darkmarine);
     }
     #close #but{
         margin: 10px 30px;
@@ -249,7 +249,6 @@ body{
         justify-content: flex-end;
         font-size: clamp(10px,2.2vh,20px);
         color: var(--white);
-        text-shadow: -1px 0 var(--gray), 0 1px var(--gray), 1px 0 var(--gray), 0 -1px var(--gray);
     }
     
     .about_me{
