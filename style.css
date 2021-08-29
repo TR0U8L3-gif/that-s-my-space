@@ -290,6 +290,9 @@ body{
         grid-column: 2;
         grid-row: 4;
     }
+    .robots .img{
+        background-image: url("img/robots.png");
+    }
     .services{
         grid-column: 3;
         grid-row: 4;
