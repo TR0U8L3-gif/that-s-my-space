@@ -60,8 +60,8 @@ body{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    grid-gap: clamp(5px,3%,15px);
-    padding: clamp(5px,3%,15px);
+    grid-gap: clamp(2px,2%,15px);
+    padding: clamp(2px,2%,15px);
 }
 
 
@@ -236,6 +236,8 @@ body{
         text-align: center;
         display: flex;
         flex-direction: column;
+        min-width: 98px;
+        
     }
     .box .img{
         width: 100%;
@@ -252,6 +254,7 @@ body{
         justify-content: flex-end;
         font-size: clamp(10px,2.2vh,20px);
         color: var(--white);
+        white-space: nowrap;
     }
     
     .about_me{
