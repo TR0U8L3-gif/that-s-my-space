@@ -15,11 +15,13 @@ function menu_out(x) {
 function minimize_but(){
     minimized = !minimized;
     if(minimized){
-        phone.style.top = "0";
+        phone.style.top = "0%";
+
     }
     else{
-        phone.style.top = "80vh";
-    }   
+        phone.style.top = "80%";
+    }
+    console.log(phone_rect.top + "  " + phone_value);   
 }
 
 function close_but(){

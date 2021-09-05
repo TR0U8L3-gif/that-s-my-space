@@ -65,16 +65,28 @@ body{
 }
 
 
-@media screen and (max-width: 640px) {
+
     /* For mobile phones: */
     .phone{
         display: block;
     }
-
+    #console{
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        max-width: 1032px;
+        max-height: 776px;
+        margin: auto;
+        top: 50%;
+        transform: translate(0,-50%);
+        z-index: 51;
+    }
     #window{
         width: 100vw;
         height: 100vh;
-        margin: 0;
+        max-width: 1024px;
+        max-height: 768px;
+        margin: auto;
         width: calc(100vw - 8px);
         height: calc(100vh - 8px);
         background-color: var(--gray);  
@@ -85,7 +97,7 @@ body{
         overflow: hidden;
         display: flex;
         flex-flow: column;
-        position: relative;
+        position: absolute;
         transition: top 2s;
         top: 0;
         left: 0;
@@ -94,7 +106,8 @@ body{
 
     #side_bar{
         min-width: calc(98% - 6px);
-        min-height: 4vh;
+        height: 4vh;
+        min-height: 30px;
         background-color: var(--blue);
         margin: 1%;
         color: var(--white);
@@ -242,8 +255,9 @@ body{
     .box .img{
         width: 100%;
         flex: 1;
-        max-width: 160px;
-        max-height: 160px;
+        max-width: 100px;
+        min-height: 100px;
+        max-height: 130px;
         margin: 0 auto;
         background-size: clamp(10px, 100%, 140px);
         background-repeat: no-repeat;
@@ -252,7 +266,7 @@ body{
     .box p{
         margin: 3% auto;
         justify-content: flex-end;
-        font-size: clamp(10px,2.2vh,20px);
+        font-size: clamp(18px,3.5vw,22px);
         color: var(--white);
         white-space: nowrap;
     }
@@ -298,5 +312,41 @@ body{
         grid-row: 4;
     }
     
+@media screen and (max-width: 640px) {
+    #console{
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        max-width: none;
+        max-height: none;
+        border: none;
+        margin: auto;
+        top: 0;
+        transform: translate(0,0);
+    }
+    #window{
+        max-width: none;
+        max-height: none;
+    }
 }
 
+@media screen and (max-width: 350px) {
+    #container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-gap: clamp(5px,5%,20px);
+        padding: clamp(5px,5%,20px);
+    }
+    .robots{
+        grid-column: 2;
+        grid-row: 3;
+    }
+    .services{
+        grid-column: 2;
+        grid-row: 4;
+    }
+    .box p{
+        font-size: 18px;
+    }
+}
