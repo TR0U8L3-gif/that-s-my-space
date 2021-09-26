@@ -40,11 +40,11 @@ function close_side(){
                 side.style.opacity = "0";
                 setTimeout(function(){
                     side.style.left = "100%";
-                },500);
+                },800);
                 setTimeout(function(){
                     open_s = false;
                     click = false;
-                },500);
+                },800);
                 
             }
             else{
@@ -53,7 +53,7 @@ function close_side(){
                 side.style.left = "0";
                 setTimeout(function(){
                     click = false;
-                },500);
+                },800);
             }
         }
     }

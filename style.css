@@ -13,6 +13,11 @@
 --darkgray:  #85878b;
 --hovergray:#b1b2b6;
 
+--darkbrown: #6d5551;
+--brown: #887869;
+--lightbrown: #c0b7a6;
+--cream: #eae7d4;
+
 --black: black;
 --white: white;
 }
@@ -30,12 +35,8 @@ body{
     height: 100vh;
     overflow: hidden; 
     margin: 0;
-    background-color: var(--white);
+    background-color: #78b1b4;
     position: absolute;
-}
-
-.phone{
-    display: none;
 }
 
 .border{
@@ -69,11 +70,65 @@ body{
     grid-template-rows: repeat(4, 1fr);
     grid-gap: clamp(2px,2%,15px);
     padding: clamp(2px,2%,15px);
-}
-    .phone{
-        display: block;
+}   
+    #cover{
+        pointer-events: none;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        max-width: 1032px;
+        max-height: 676px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 101; 
+        border-top: 10px solid var(--brown);
+        border-bottom: 10px solid var(--lightbrown);
+        border-right: 10px solid var(--darkbrown);
+        border-left: 10px solid var(--darkbrown);
+        box-shadow: 
+        inset 0 0 0 2px #2b1607,
+        0 0 0 20px var(--cream),
+        0 0 0 22px #2b1607;
+
+
+    }
+    #device{
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1032px 1fr;
+        grid-template-rows: 1fr 676px 1fr;
+    }
+    #left,
+    #top,
+    #right,
+    #bot{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 100;
+        background-color: var(--white);
+    }
+    #left{
+        grid-column: 1;
+        grid-row: 1/ 4;
+    }
+    #top{
+        grid-column: 2;
+        grid-row: 1;        
+    }
+    #right{
+        grid-column: 3;
+        grid-row: 1/ 4;
+    }
+    #bot{
+       grid-column: 2;
+        grid-row: 3;
     }
     #console{
+        grid-column: 2;
+        grid-row: 2;
         position: relative;
         width: 100vw;
         height: 100vh;
@@ -128,7 +183,7 @@ body{
             left: 80%;
             visibility: hidden;
             opacity:0;
-            transition:visibility 0.5s linear,opacity 0.5s cubic-bezier(0.95, 0.75, 1, 1), left 1s ease-in-out;
+            transition:visibility 0.7s linear,opacity 0.7s linear, left 1.5s ease-in-out;
             z-index: 51;
         }
         #article{
@@ -223,7 +278,8 @@ body{
         transform: translate(0,-50%);
         padding: 10px;
         border: 3px solid var(--darkgray);
-        box-shadow: 10px 10px  var(--gray);    
+        box-shadow: 10px 10px  var(--gray); 
+        background-color: var(--lightgray);   
         
     }
     #minimize p{
