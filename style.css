@@ -8,6 +8,8 @@
 --lightblue: #706fac;
 --blue: #000086;
 
+--red: rgb(161, 30, 30);
+
 --lightgray: #e6e4e7;
 --gray: #c4c7cc;
 --darkgray:  #85878b;
@@ -109,22 +111,28 @@ body{
         position: relative;
         z-index: 100;
         background-color: var(--white);
+        border: 2px solid var(--white);
     }
     #left{
         grid-column: 1;
         grid-row: 1/ 4;
+        border-right: none;
+        
     }
     #top{
         grid-column: 2;
-        grid-row: 1;        
+        grid-row: 1;       
+        border-bottom: none; 
     }
     #right{
         grid-column: 3;
         grid-row: 1/ 4;
+        border-left: none;
     }
     #bot{
        grid-column: 2;
         grid-row: 3;
+        border-top: none;
     }
     #console{
         grid-column: 2;
@@ -413,6 +421,7 @@ body{
     }
 
 @media screen and (max-width: 1224px) {
+
     #minimize {
         top: 5vh; 
     }
@@ -431,18 +440,27 @@ body{
         grid-template-columns: 1fr 728px 1fr;
         grid-template-rows: 1fr 628px 5fr;
     }
+    #close{
+        top: 30%;
+    }
     #cover{
 
         max-width: 728px;
         max-height: 628px;
-        border-top: 10px solid var(--brown);
-        border-bottom: 10px solid var(--lightbrown);
-        border-right: 10px solid var(--darkbrown);
-        border-left: 10px solid var(--darkbrown);
+        border-top: 10px solid firebrick;
+        border-bottom: 10px solid red;
+        border-right: 10px solid maroon;
+        border-left: 10px solid maroon;
         box-shadow: 
-        inset 0 0 0 2px #2b1607,
-        0 0 0 20px var(--cream),
-        0 0 0 22px #2b1607;
+        inset 0 0 0 2px darkred,
+        0 400px 0 -275px purple,
+        0 0 0 20px var(--red),
+        0 28px 0 20px var(--red),
+        0 300px 0 -75px black,
+        
+        0 250px 0 20px var(--red),
+        0 0 0 22px darkred,
+        0 250px 0 22px darkred;
         transform: translate(-10px,-10px);
 
     }
@@ -484,6 +502,10 @@ body{
 }
 
 @media screen and (max-width: 786px) {
+    
+    #close{
+        top: 50%;
+    }
     #minimize{
         top: 0; 
     }
